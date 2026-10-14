@@ -1,0 +1,26 @@
+{
+  "description": "Proof: track code edits and check runs; block finishing until changes are verified.",
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit|NotebookEdit",
+        "hooks": [{ "type": "command", "command": "sh \"${CLAUDE_PLUGIN_ROOT}/scripts/run.sh\" edit", "timeout": 10 }]
+      },
+      {
+        "matcher": "Bash",
+        "hooks": [{ "type": "command", "command": "sh \"${CLAUDE_PLUGIN_ROOT}/scripts/run.sh\" ran", "timeout": 10 }]
+      }
+    ],
+    "PostToolUseFailure": [
+      {
+        "matcher": "Bash",
+        "hooks": [{ "type": "command", "command": "sh \"${CLAUDE_PLUGIN_ROOT}/scripts/run.sh\" failed", "timeout": 10 }]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [{ "type": "command", "command": "sh \"${CLAUDE_PLUGIN_ROOT}/scripts/run.sh\" stop", "timeout": 10 }]
+      }
+    ]
+  }
+}

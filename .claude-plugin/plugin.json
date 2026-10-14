@@ -1,0 +1,10 @@
+{
+  "name": "proof",
+  "version": "1.0.0",
+  "description": "Claude can't call it done until the checks have run. Blocks finishing a turn when code changed after the last passing test, lint, or typecheck. Zero config.",
+  "author": { "name": "giveitlegs" },
+  "license": "MIT",
+  "homepage": "https://github.com/giveitlegs/proof",
+  "repository": "https://github.com/giveitlegs/proof",
+  "keywords": ["verification", "testing", "hooks", "quality", "ci", "guardrails"]
+}

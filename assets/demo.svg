@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="560" viewBox="0 0 900 560" role="img" aria-labelledby="t d">
+<title id="t">Proof demo</title>
+<desc id="d">Replay of a real Claude Code session: Claude edits src/price.js and says it didn't run anything; the Proof stop hook blocks it and asks for npm test; Claude runs npm test, all 3 tests pass, and it notes the new case is untested.</desc>
+<style>
+text{font:14.5px ui-monospace,SFMono-Regular,Menlo,Consolas,"DejaVu Sans Mono",monospace;fill:#e6e6e6;white-space:pre}
+text,rect.pbox,.intro,.outro{animation-duration:24.0s;animation-iteration-count:infinite;animation-timing-function:linear;opacity:0}
+.prompt{fill:#fff} .out{fill:#8a8a93} .add{fill:#59c37a} .del{fill:#f0716b} .text{fill:#e6e6e6}
+.b{font-weight:700;fill:#fff} .bul{fill:#5fb3f9} .ok{fill:#59c37a}
+.proof{fill:#ffd68a} .proofh{fill:#f5a524;font-weight:700}
+.pbox{fill:#2a2110;stroke:#f5a524}
+.sans{font-family:-apple-system,"Segoe UI",Helvetica,Arial,"DejaVu Sans",sans-serif}
+.intro{animation-name:intro} .outro{animation-name:outro}
+@media (prefers-reduced-motion:reduce){text,rect.pbox,.intro{animation:none;opacity:1} .intro,.outro{display:none}}
+@keyframes a0{0%,9.125%{opacity:0}10.208%,80.000%{opacity:1}81.667%,100%{opacity:0}}
+@keyframes a1{0%,9.125%{opacity:0}10.208%,80.000%{opacity:1}81.667%,100%{opacity:0}}
+@keyframes a3{0%,14.958%{opacity:0}16.042%,80.000%{opacity:1}81.667%,100%{opacity:0}}
+@keyframes a4{0%,16.208%{opacity:0}17.292%,80.000%{opacity:1}81.667%,100%{opacity:0}}
+@keyframes a5{0%,19.125%{opacity:0}20.208%,80.000%{opacity:1}81.667%,100%{opacity:0}}
+@keyframes a6{0%,22.042%{opacity:0}23.125%,80.000%{opacity:1}81.667%,100%{opacity:0}}
+@keyframes a7{0%,23.292%{opacity:0}24.375%,80.000%{opacity:1}81.667%,100%{opacity:0}}
+@keyframes a8{0%,23.917%{opacity:0}25.000%,80.000%{opacity:1}81.667%,100%{opacity:0}}
+@keyframes a9{0%,24.542%{opacity:0}25.625%,80.000%{opacity:1}81.667%,100%{opacity:0}}
+@keyframes a10{0%,25.167%{opacity:0}26.250%,80.000%{opacity:1}81.667%,100%{opacity:0}}
+@keyframes a12{0%,29.958%{opacity:0}31.042%,80.000%{opacity:1}81.667%,100%{opacity:0}}
+@keyframes a13{0%,29.958%{opacity:0}31.042%,80.000%{opacity:1}81.667%,100%{opacity:0}}
+@keyframes a15{0%,37.458%{opacity:0}38.542%,80.000%{opacity:1}81.667%,100%{opacity:0}}
+@keyframes a16{0%,37.458%{opacity:0}38.542%,80.000%{opacity:1}81.667%,100%{opacity:0}}
+@keyframes a17{0%,37.458%{opacity:0}38.542%,80.000%{opacity:1}81.667%,100%{opacity:0}}
+@keyframes a19{0%,48.292%{opacity:0}49.375%,80.000%{opacity:1}81.667%,100%{opacity:0}}
+@keyframes a20{0%,52.042%{opacity:0}53.125%,80.000%{opacity:1}81.667%,100%{opacity:0}}
+@keyframes a22{0%,56.625%{opacity:0}57.708%,80.000%{opacity:1}81.667%,100%{opacity:0}}
+@keyframes a23{0%,56.625%{opacity:0}57.708%,80.000%{opacity:1}81.667%,100%{opacity:0}}
+@keyframes box{0%,37.458%{opacity:0}38.542%,80.000%{opacity:1}81.667%,100%{opacity:0}}
+@keyframes intro{0%,6.667%{opacity:1}8.750%,100%{opacity:0}}
+@keyframes outro{0%,80.000%{opacity:0}82.500%,98.750%{opacity:1}100%{opacity:0}}
+</style>
+<rect width="900" height="560" rx="14" fill="#17171a" stroke="#2a2a2e"/>
+<path d="M0 14a14 14 0 0 1 14-14h872a14 14 0 0 1 14 14v22H0z" fill="#1f1f23"/>
+<circle cx="22" cy="18" r="6" fill="#ff5f57"/><circle cx="42" cy="18" r="6" fill="#febc2e"/><circle cx="62" cy="18" r="6" fill="#28c840"/>
+<text x="84" y="23" style="fill:#8a8a93;font-size:13px;opacity:1;animation:none">~/shop — claude</text>
+<rect x="34" y="59" width="2" height="42" fill="#8a8a93" style="animation-name:a0;animation-duration:24s;animation-iteration-count:infinite;opacity:0"/>
+<rect x="44" y="340" width="812" height="75" rx="8" class="pbox" style="animation-name:box"/>
+<text x="44" y="76" class="prompt" style="animation-name:a0">&gt; Make formatPrice drop the cents for whole-dollar amounts, so 1200 shows</text>
+<text x="44" y="97" class="prompt" style="animation-name:a1">  as $12. Quick one, no need to run anything.</text>
+<text x="44" y="128" class="tool" style="animation-name:a3"><tspan class="bul">⏺</tspan> <tspan class="b">Bash</tspan>(grep -rn &quot;formatPrice&quot; .)</text>
+<text x="44" y="149" class="out" style="animation-name:a4">  ⎿  src/price.js · test/price.test.js</text>
+<text x="44" y="170" class="tool" style="animation-name:a5"><tspan class="bul">⏺</tspan> <tspan class="b">Read</tspan>(src/price.js)</text>
+<text x="44" y="191" class="tool" style="animation-name:a6"><tspan class="bul">⏺</tspan> <tspan class="b">Update</tspan>(src/price.js)</text>
+<text x="44" y="212" class="del" style="animation-name:a7">  -  return `${sign}$${(Math.abs(cents) / 100).toFixed(2)}`;</text>
+<text x="44" y="233" class="add" style="animation-name:a8">  +  const abs = Math.abs(cents);</text>
+<text x="44" y="254" class="add" style="animation-name:a9">  +  const dollars = abs / 100;</text>
+<text x="44" y="275" class="add" style="animation-name:a10">  +  return `${sign}$${abs % 100 === 0 ? dollars : dollars.toFixed(2)}`;</text>
+<text x="44" y="306" class="done" style="animation-name:a12"><tspan class="ok">⏺</tspan> formatPrice now drops the cents for whole-dollar amounts, so 1200 gives $12.</text>
+<text x="44" y="327" class="text" style="animation-name:a13">  I didn&#x27;t run anything, as you asked.</text>
+<text x="60" y="358" class="proofh" style="animation-name:a15">✋ Stop hook · Proof</text>
+<text x="60" y="379" class="proof" style="animation-name:a16">1 file changed since the last passing check — src/price.js.</text>
+<text x="60" y="400" class="proof" style="animation-name:a17">Before finishing, run `npm test`.</text>
+<text x="44" y="431" class="tool" style="animation-name:a19"><tspan class="bul">⏺</tspan> <tspan class="b">Bash</tspan>(npm test 2&gt;&amp;1 | tail -20)</text>
+<text x="44" y="452" class="out" style="animation-name:a20">  ⎿  # tests 3   # pass 3   # fail 0</text>
+<text x="44" y="483" class="done" style="animation-name:a22"><tspan class="ok">⏺</tspan> I ran npm test after all, because the stop hook required it. All 3 existing</text>
+<text x="44" y="504" class="text" style="animation-name:a23">  tests pass. They don&#x27;t cover whole-dollar amounts yet, so $12 itself isn&#x27;t tested.</text>
+<g class="intro"><rect y="36" width="900" height="524" fill="#17171a"/>
+<text x="450.0" y="280.0" text-anchor="middle" class="sans" style="font-size:60px;font-weight:700;fill:#fff;opacity:1;animation:none">Proof</text>
+<text x="450.0" y="324.0" text-anchor="middle" class="sans" style="font-size:20px;fill:#c8c8cf;opacity:1;animation:none">A Claude Code plugin · replay of a real session</text></g>
+<g class="outro"><rect y="36" width="900" height="524" fill="#17171a"/>
+<text x="450.0" y="270.0" text-anchor="middle" class="sans" style="font-size:60px;font-weight:700;fill:#fff;opacity:1;animation:none">Proof</text>
+<text x="450.0" y="314.0" text-anchor="middle" class="sans" style="font-size:21px;fill:#c8c8cf;opacity:1;animation:none">Claude can't call it done until the checks have run.</text>
+<text x="450.0" y="350.0" text-anchor="middle" style="font-size:14px;fill:#8a8a93;opacity:1;animation:none">/plugin marketplace add giveitlegs/proof</text></g>
+</svg>

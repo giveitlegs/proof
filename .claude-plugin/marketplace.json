@@ -1,0 +1,14 @@
+{
+  "name": "proof",
+  "description": "Proof: Claude can't call it done until the checks have run.",
+  "owner": {
+    "name": "giveitlegs"
+  },
+  "plugins": [
+    {
+      "name": "proof",
+      "source": "./",
+      "description": "Claude can't call it done until the checks have run."
+    }
+  ]
+}
